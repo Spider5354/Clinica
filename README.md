@@ -1,1 +1,1 @@
-# Cl-nica
+# Clinica
