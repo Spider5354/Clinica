@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odontologia Integrada | Bela Vista de Minas</title>
+    <title>Odontologia Integrada Dra. Rivane Almeida | Bela Vista de Minas</title>
     <style>
         :root {
             --primary: #0f4c5c;
@@ -17,50 +17,62 @@
         
         /* Hero Section */
         header {
-            background: linear-gradient(rgba(15, 76, 92, 0.9), rgba(15, 76, 92, 0.9)), url('https://unsplash.com') no-repeat center center/cover;
+            background: linear-gradient(rgba(15, 76, 92, 0.95), rgba(15, 76, 92, 0.95)), url('https://unsplash.com') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 100px 20px;
         }
-        header h1 { font-size: 2.5rem; margin-bottom: 20px; }
-        header p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; }
+        header h2 { font-weight: 300; letter-spacing: 2px; font-size: 1.5rem; }
+        header h1 { font-size: 2.8rem; margin: 20px 0; }
+        header p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; opacity: 0.9; }
         
         /* Botões */
         .btn-whatsapp {
             background-color: var(--whatsapp);
             color: white;
-            padding: 15px 30px;
+            padding: 16px 35px;
             font-size: 1.1rem;
             font-weight: bold;
             text-decoration: none;
             border-radius: 50px;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
             transition: 0.3s;
         }
-        .btn-whatsapp:hover { transform: translateY(-3px); background-color: #20ba5a; }
+        .btn-whatsapp:hover { transform: translateY(-3px); background-color: #20ba5a; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
 
         /* Seções */
-        section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
-        .section-title { text-align: center; color: var(--primary); margin-bottom: 40px; font-size: 2rem; }
+        section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
+        .section-title { text-align: center; color: var(--primary); margin-bottom: 40px; font-size: 2rem; position: relative; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--secondary); margin: 10px auto 0; }
         
+        /* Diferenciais Grid */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .feature-card { text-align: center; padding: 20px; background: var(--light); border-radius: 8px; }
+        .feature-card .icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+        .feature-card h3 { color: var(--primary); margin-bottom: 10px; }
+
         /* Grid de Serviços */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .service-card { background: var(--light); padding: 25px; border-radius: 8px; border-top: 5px solid var(--primary); }
+        .service-card { background: white; padding: 25px; border-radius: 8px; border-top: 5px solid var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .service-card h3 { margin-bottom: 10px; color: var(--primary); }
 
         /* Equipe */
         .team-list { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; text-align: center; }
-        .team-member { background: var(--light); padding: 20px; border-radius: 8px; width: 280px; }
-        .team-member h3 { color: var(--primary); }
-        .team-member span { font-size: 0.9rem; color: #666; font-weight: bold; }
+        .team-member { background: white; padding: 25px; border-radius: 8px; width: 280px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .team-member h3 { color: var(--primary); margin-bottom: 5px; }
+        .team-member span { font-size: 0.9rem; color: var(--secondary); font-weight: bold; }
+
+        /* Convênios */
+        .convenios-box { background: var(--light); padding: 40px; border-radius: 12px; text-align: center; margin-top: 40px; border: 1px dashed var(--primary); }
 
         /* Rodapé / Contato */
-        footer { background-color: var(--primary); color: white; padding: 40px 20px; text-align: center; }
-        footer p { margin-bottom: 10px; }
+        footer { background-color: var(--primary); color: white; padding: 50px 20px; text-align: center; }
+        footer p { margin-bottom: 12px; font-size: 1.05rem; }
         
         @media (max-width: 768px) {
             header h1 { font-size: 2rem; }
+            section { padding: 50px 20px; }
         }
     </style>
 </head>
@@ -68,20 +80,36 @@
 
     <!-- Principal -->
     <header>
-        <h2>Odontologia Integrada</h2>
-        <br>
+        <h2>ODONTOLOGIA INTEGRADA</h2>
         <h1>Sorria com Confiança e Sem Dor</h1>
-        <p>Atendimento odontológico completo e multidisciplinar em Bela Vista de Minas. Cuidamos do seu sorriso com o carinho e a tecnologia que você merece.</p>
+        <p>Atendimento odontológico completo e multidisciplinar em Bela Vista de Minas. Cuidamos da sua saúde bucal com tecnologia e acolhimento.</p>
         <a href="https://wa.me." target="_blank" class="btn-whatsapp">
             🟢 Agendar Consulta no WhatsApp
         </a>
     </header>
 
-    <!-- Sobre -->
+    <!-- Diferenciais Diferenciados -->
     <section id="sobre">
-        <h2 class="section-title">A Clínica</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
-            A <strong>Odontologia Integrada</strong> reúne profissionais altamente qualificados em um único espaço estruturado para resolver desde limpezas de rotina até reabilitações complexas. Nosso foco é oferecer tratamentos rápidos, sem burocracia e com o máximo de conforto para você.
+        <h2 class="section-title">Por Que Escolher a Nossa Clínica?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="icon">🔬</span>
+                <h3>Tecnologia Avançada</h3>
+                <p>Diagnósticos precisos com câmera intraoral e equipamentos modernos para tratamentos rápidos.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">🛋️</span>
+                <h3>Anestesia Confortável</h3>
+                <p>Técnicas focadas no seu bem-estar para um procedimento humanizado, tranquilo e sem traumas.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">💳</span>
+                <h3>Facilidade de Pagamento</h3>
+                <p>Condições flexíveis e parcelamento facilitado para você não adiar o seu tratamento dos sonhos.</p>
+            </div>
+        </div>
+        <p style="text-align: center; max-width: 800px; margin: 40px auto 0; font-size: 1.1rem; color: #555;">
+            Sob a liderança da <strong>Dra. Rivane Almeida</strong>, unimos profissionais renomados em um só lugar. Assim, você realiza todas as etapas do seu tratamento sem precisar mudar de clínica.
         </p>
     </section>
 
@@ -96,7 +124,7 @@
                 </div>
                 <div class="team-member">
                     <h3>Dra. Ana Lúcia</h3>
-                    <span>Ortodontia</span>
+                    <span>Ortodontia (Aparelhos)</span>
                 </div>
                 <div class="team-member">
                     <h3>Dr. Ronald Ribeiro</h3>
@@ -108,25 +136,27 @@
 
     <!-- Serviços -->
     <section id="servicos">
-        <h2 class="section-title">Como Podemos Ajudar Você</h2>
+        <h2 class="section-title">Tratamentos Oferecidos</h2>
         <div class="services-grid">
             <div class="service-card">
                 <h3>🦷 Implantes e Próteses</h3>
-                <p>Sorria e mastigue novamente sem medo. Tecnologias modernas para substituição de dentes de forma segura.</p>
+                <p>Recupere a mastigação e a segurança para sorrir. Opções modernas de reabilitação oral estável.</p>
             </div>
             <div class="service-card">
                 <h3>✨ Aparelhos Ortodônticos</h3>
-                <p>Correção e alinhamento dos dentes para crianças e adultos, melhorando a estética e a respiração.</p>
+                <p>Alinhamento estético e funcional para crianças e adultos com acompanhamento especializado.</p>
             </div>
             <div class="service-card">
                 <h3>⚡ Tratamento de Canal</h3>
-                <p>Procedimentos modernos focados no alívio rápido da dor e na preservação do seu dente natural.</p>
+                <p>Tecnologia endodôntica para alívio rápido da dor e preservação do elemento dental com total segurança.</p>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="https://wa.me." target="_blank" class="btn-whatsapp">
-                Consultar Outros Procedimentos
-            </a>
+
+        <!-- Bloco de Convênios -->
+        <div class="convenios-box">
+            <h3>🩺 Atendemos Particulares e Convênios</h3>
+            <p style="margin: 10px 0 20px; color: #555;">Aceitamos os principais planos odontológicos da região. Entre em contato para validar a cobertura do seu plano!</p>
+            <a href="https://wa.me." target="_blank" style="color: var(--primary); font-weight: bold; text-decoration: none; border-bottom: 2px solid var(--primary);">Consultar meu convênio por aqui &rarr;</a>
         </div>
     </section>
 
@@ -135,7 +165,7 @@
         <p><strong>📍 Endereço:</strong> Av. José Modesto de Ávila, 618 - Centro, Bela Vista de Minas - MG</p>
         <p><strong>📞 WhatsApp:</strong> (31) 98668-1262</p>
         <p><strong>🕒 Horários:</strong> Seg a Sex das 7h às 20h | Sábado das 7h às 12h</p>
-        <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Odontologia Integrada. Todos os direitos reservados.</p>
+        <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Odontologia Integrada. Todos os direitos reservados.</p>
     </footer>
 
 </body>
