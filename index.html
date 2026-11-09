@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odontologia Integrada Dra. Rivane Almeida | Bela Vista de Minas</title>
+    <!-- Importando a fonte Montserrat do Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --primary: #0f4c5c;
@@ -12,27 +17,27 @@
             --dark: #212529;
             --whatsapp: #25d366;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
         body { color: var(--dark); background-color: #fff; line-height: 1.6; }
         
-        /* Hero Section */
+        /* Hero Section com Imagem de Fundo Profissional */
         header {
-            background: linear-gradient(rgba(15, 76, 92, 0.95), rgba(15, 76, 92, 0.95)), url('https://unsplash.com') no-repeat center center/cover;
+            background: linear-gradient(rgba(15, 76, 92, 0.9), rgba(15, 76, 92, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 140px 20px;
         }
-        header h2 { font-weight: 300; letter-spacing: 2px; font-size: 1.5rem; }
-        header h1 { font-size: 2.8rem; margin: 20px 0; }
-        header p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; opacity: 0.9; }
+        header h2 { font-weight: 300; letter-spacing: 3px; font-size: 1.4rem; color: #cbd5e1; }
+        header h1 { font-size: 3rem; margin: 20px 0; font-weight: 700; }
+        header p { font-size: 1.2rem; max-width: 650px; margin: 0 auto 35px; opacity: 0.9; font-weight: 400; }
         
         /* Botões */
         .btn-whatsapp {
             background-color: var(--whatsapp);
             color: white;
-            padding: 16px 35px;
+            padding: 18px 40px;
             font-size: 1.1rem;
-            font-weight: bold;
+            font-weight: 700;
             text-decoration: none;
             border-radius: 50px;
             display: inline-block;
@@ -43,35 +48,40 @@
 
         /* Seções */
         section { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
-        .section-title { text-align: center; color: var(--primary); margin-bottom: 40px; font-size: 2rem; position: relative; }
-        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--secondary); margin: 10px auto 0; }
+        .section-title { text-align: center; color: var(--primary); margin-bottom: 40px; font-size: 2.2rem; font-weight: 700; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--secondary); margin: 12px auto 0; border-radius: 2px; }
         
         /* Diferenciais Grid */
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 40px; }
-        .feature-card { text-align: center; padding: 20px; background: var(--light); border-radius: 8px; }
-        .feature-card .icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
-        .feature-card h3 { color: var(--primary); margin-bottom: 10px; }
+        .feature-card { text-align: center; padding: 35px 25px; background: var(--light); border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .feature-card .icon { font-size: 2.8rem; margin-bottom: 15px; display: block; }
+        .feature-card h3 { color: var(--primary); margin-bottom: 12px; font-weight: 600; }
 
         /* Grid de Serviços */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .service-card { background: white; padding: 25px; border-radius: 8px; border-top: 5px solid var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .service-card h3 { margin-bottom: 10px; color: var(--primary); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .service-card { background: white; padding: 30px; border-radius: 12px; border-top: 5px solid var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .service-card h3 { margin-bottom: 12px; color: var(--primary); font-weight: 600; }
 
         /* Equipe */
         .team-list { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; text-align: center; }
-        .team-member { background: white; padding: 25px; border-radius: 8px; width: 280px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .team-member h3 { color: var(--primary); margin-bottom: 5px; }
-        .team-member span { font-size: 0.9rem; color: var(--secondary); font-weight: bold; }
+        .team-member { background: white; padding: 30px 25px; border-radius: 12px; width: 280px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .team-member h3 { color: var(--primary); margin-bottom: 8px; font-weight: 600; }
+        .team-member span { font-size: 0.95rem; color: var(--secondary); font-weight: 700; letter-spacing: 0.5px; }
 
         /* Convênios */
-        .convenios-box { background: var(--light); padding: 40px; border-radius: 12px; text-align: center; margin-top: 40px; border: 1px dashed var(--primary); }
+        .convenios-box { background: linear-gradient(rgba(248, 249, 250, 0.95), rgba(248, 249, 250, 0.95)), url('https://unsplash.com') no-repeat center center/cover; padding: 50px 40px; border-radius: 12px; text-align: center; margin-top: 50px; border: 1px solid #e2e8f0; }
+        .convenios-box h3 { color: var(--primary); font-size: 1.6rem; margin-bottom: 10px; }
 
         /* Rodapé / Contato */
-        footer { background-color: var(--primary); color: white; padding: 50px 20px; text-align: center; }
-        footer p { margin-bottom: 12px; font-size: 1.05rem; }
+        footer { background-color: var(--primary); color: white; padding: 60px 20px; text-align: center; }
+        footer p { margin-bottom: 15px; font-size: 1.1rem; font-weight: 300; }
+        footer strong { font-weight: 600; color: #cbd5e1; }
         
         @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
+            header h1 { font-size: 2.2rem; }
+            header h2 { font-size: 1.1rem; }
+            .section-title { font-size: 1.8rem; }
             section { padding: 50px 20px; }
         }
     </style>
@@ -80,36 +90,37 @@
 
     <!-- Principal -->
     <header>
-        <h2>ODONTOLOGIA INTEGRADA</h2>
+        <h2>DRAS. RIVANE E ANA LÚCIA | DR. RONALD</h2>
         <h1>Sorria com Confiança e Sem Dor</h1>
-        <p>Atendimento odontológico completo e multidisciplinar em Bela Vista de Minas. Cuidamos da sua saúde bucal com tecnologia e acolhimento.</p>
+        <p>Atendimento odontológico completo, moderno e multidisciplinar em Bela Vista de Minas. Cuidamos da sua saúde bucal com acolhimento de excelência.</p>
+        <!-- Link real do WhatsApp com mensagem personalizada embutida -->
         <a href="https://wa.me." target="_blank" class="btn-whatsapp">
             🟢 Agendar Consulta no WhatsApp
         </a>
     </header>
 
-    <!-- Diferenciais Diferenciados -->
+    <!-- Diferenciais -->
     <section id="sobre">
         <h2 class="section-title">Por Que Escolher a Nossa Clínica?</h2>
         <div class="features-grid">
             <div class="feature-card">
                 <span class="icon">🔬</span>
                 <h3>Tecnologia Avançada</h3>
-                <p>Diagnósticos precisos com câmera intraoral e equipamentos modernos para tratamentos rápidos.</p>
+                <p>Diagnósticos precisos com infraestrutura e equipamentos modernos para tratamentos rápidos e assertivos.</p>
             </div>
             <div class="feature-card">
                 <span class="icon">🛋️</span>
                 <h3>Anestesia Confortável</h3>
-                <p>Técnicas focadas no seu bem-estar para um procedimento humanizado, tranquilo e sem traumas.</p>
+                <p>Técnicas focadas no seu bem-estar para proporcionar um procedimento humanizado, totalmente tranquilo e livre de traumas.</p>
             </div>
             <div class="feature-card">
                 <span class="icon">💳</span>
                 <h3>Facilidade de Pagamento</h3>
-                <p>Condições flexíveis e parcelamento facilitado para você não adiar o seu tratamento dos sonhos.</p>
+                <p>Condições flexíveis e parcelamento facilitado para você investir no seu sorriso sem pesar no orçamento.</p>
             </div>
         </div>
-        <p style="text-align: center; max-width: 800px; margin: 40px auto 0; font-size: 1.1rem; color: #555;">
-            Sob a liderança da <strong>Dra. Rivane Almeida</strong>, unimos profissionais renomados em um só lugar. Assim, você realiza todas as etapas do seu tratamento sem precisar mudar de clínica.
+        <p style="text-align: center; max-width: 800px; margin: 40px auto 0; font-size: 1.15rem; color: #4a5568; font-weight: 400;">
+            Sob a liderança da <strong>Dra. Rivane Almeida</strong>, nossa equipe unida atua de forma multidisciplinar. Você realiza todas as etapas do seu tratamento em um só lugar, com comodidade e agilidade.
         </p>
     </section>
 
@@ -124,7 +135,7 @@
                 </div>
                 <div class="team-member">
                     <h3>Dra. Ana Lúcia</h3>
-                    <span>Ortodontia (Aparelhos)</span>
+                    <span>Ortodontia</span>
                 </div>
                 <div class="team-member">
                     <h3>Dr. Ronald Ribeiro</h3>
@@ -140,23 +151,23 @@
         <div class="services-grid">
             <div class="service-card">
                 <h3>🦷 Implantes e Próteses</h3>
-                <p>Recupere a mastigação e a segurança para sorrir. Opções modernas de reabilitação oral estável.</p>
+                <p>Recupere sua mastigação correta e a segurança para sorrir em público. Opções modernas de reabilitação oral estável.</p>
             </div>
             <div class="service-card">
                 <h3>✨ Aparelhos Ortodônticos</h3>
-                <p>Alinhamento estético e funcional para crianças e adultos com acompanhamento especializado.</p>
+                <p>Alinhamento estético e correção funcional para crianças, jovens e adultos com acompanhamento especializado.</p>
             </div>
             <div class="service-card">
                 <h3>⚡ Tratamento de Canal</h3>
-                <p>Tecnologia endodôntica para alívio rápido da dor e preservação do elemento dental com total segurança.</p>
+                <p>Tecnologia endodôntica avançada para o alívio rápido da dor e preservação do elemento dental com total segurança.</p>
             </div>
         </div>
 
         <!-- Bloco de Convênios -->
         <div class="convenios-box">
-            <h3>🩺 Atendemos Particulares e Convênios</h3>
-            <p style="margin: 10px 0 20px; color: #555;">Aceitamos os principais planos odontológicos da região. Entre em contato para validar a cobertura do seu plano!</p>
-            <a href="https://wa.me." target="_blank" style="color: var(--primary); font-weight: bold; text-decoration: none; border-bottom: 2px solid var(--primary);">Consultar meu convênio por aqui &rarr;</a>
+            <h3>Atendemos Particulares e Convênios</h3>
+            <p style="margin: 10px 0 25px; color: #4a5568; font-size: 1.05rem;">Aceitamos os principais planos odontológicos da região de Bela Vista de Minas. Entre em contato para validar a cobertura do seu plano!</p>
+            <a href="https://wa.me." target="_blank" style="color: var(--primary); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--primary); padding-bottom: 2px;">Consultar meu convênio por aqui &rarr;</a>
         </div>
     </section>
 
@@ -165,8 +176,4 @@
         <p><strong>📍 Endereço:</strong> Av. José Modesto de Ávila, 618 - Centro, Bela Vista de Minas - MG</p>
         <p><strong>📞 WhatsApp:</strong> (31) 98668-1262</p>
         <p><strong>🕒 Horários:</strong> Seg a Sex das 7h às 20h | Sábado das 7h às 12h</p>
-        <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Odontologia Integrada. Todos os direitos reservados.</p>
-    </footer>
-
-</body>
-</html>
+        <p style="margin-top: 40px; font-size: 0.85rem; opacity: 0.6; letter-spacing: 0.5px;">&copy; 2026 Odontologia Integrada. Todos os direitos reservados.</p>
